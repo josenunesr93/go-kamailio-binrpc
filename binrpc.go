@@ -427,11 +427,12 @@ func ReadPacket(r io.Reader, expectedCookie []byte) ([]Record, error) {
 	if err != nil {
 		return nil, err
 	}
-
+	fmt.Errorf("expected cookie may be  %v ",expectedCookie)
 	if expectedCookie != nil && bytes.Compare(expectedCookie, header.Cookie) != 0 {
+		fmt.Errorf("NON expected cookie is %v ",expectedCookie)
 		return nil, errors.New("expected cookie did not match")
 	}
-
+	fmt.Errorf("The expected cookie really was %v ",expectedCookie)
 	payloadBytes := make([]byte, header.PayloadLength)
 
 	if _, err := io.ReadFull(bufreader, payloadBytes); err != nil {
