@@ -1,4 +1,4 @@
-module github.com/josenunesr93/go-kamailio-binrpc
+module github.com/josenunesr93/go-kamailio-binrpc/v3.1
 
 require github.com/pkg/errors v0.8.1
 
