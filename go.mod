@@ -1,4 +1,4 @@
-module github.com/josenunesr93/go-kamailio-binrpc/v3.1
+module github.com/josenunesr93/go-kamailio-binrpc/v3
 
 go 1.10
 
